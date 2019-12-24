@@ -1,0 +1,35 @@
+
+package com.hcl.day4;
+
+public class CustomerMain
+{
+private String city;
+private double premium;
+private int custId;
+private String name;
+
+public static void main(String[] args)
+{
+Customer cust=new Customer(12,"Nanditha","Sai",21.2);
+Customer cust1=new Customer(12,"djhbsj","jbjjb",56.9);
+Customer cust2=new Customer(12,"ojo","ivsb",43.5);
+Customer cust3=new Customer(12,"qss","qeqa",32.7);
+Customer[]arr={cust,cust1,cust2,cust3};
+
+        for (Customer customer : arr)
+        {
+         
+System.out.println(customer);
+
+
+       }
+        System.out.println(cust);
+        System.out.println(cust1);
+        System.out.println(cust2);
+        System.out.println(cust3);
+
+      }
+}
+
+
+

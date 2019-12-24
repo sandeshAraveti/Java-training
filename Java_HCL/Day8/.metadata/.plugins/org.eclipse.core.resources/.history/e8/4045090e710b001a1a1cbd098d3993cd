@@ -1,0 +1,11 @@
+package com.hcl.project;
+
+public class CustomerException extends Exception {
+	public StudentException () {
+		
+	}
+	
+		
+	}
+
+}

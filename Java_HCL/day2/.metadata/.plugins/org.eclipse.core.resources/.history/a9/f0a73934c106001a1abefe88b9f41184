@@ -1,0 +1,13 @@
+
+package com.hcl.day2;
+
+public class P36 {
+	boolean flag;
+public static void main(String[] args) {
+	
+		System.out.println(new Quiz4().flag);
+		
+
+
+}
+}

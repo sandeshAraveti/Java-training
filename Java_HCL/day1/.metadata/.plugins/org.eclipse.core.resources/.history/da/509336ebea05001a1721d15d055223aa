@@ -1,0 +1,22 @@
+package com.hcl.day3;
+
+public class Factorial {
+	
+	public void fact(int n){
+		int fact=1;
+		for( int i=1,i<=n,i++){
+			fact=fact*i;
+		}
+		
+			System.out.println("Factorial of a given number " +fact);
+		}
+		
+	}
+	public static void main(String[] args) {
+		int n=5;
+		Factorial obj=new Factorial();
+		obj.fact(n);
+	}
+	}
+
+

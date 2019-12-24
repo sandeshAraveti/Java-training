@@ -1,0 +1,23 @@
+package com.hcl.day2;
+
+public class Student {
+	public void show (Object ob){
+    String type=ob.getClass().getSimpleName();
+    if(type.equals("Student")){
+		Student e=(Student)ob;
+		System.out.println(e);
+	}
+	}
+	public static void main(String[] args) {
+    Student student=new Student();		
+	int sno;
+	String firstName;
+	String lastName;
+	Double cgp;
+	new Student().show(student);
+	
+	}
+	
+	
+}
+

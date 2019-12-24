@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form method="get" action="employsearch.jsp">
+<center>
+<sql:setDataSource var="conn"
+driver="com.mysql.jdbc.Driver"
+url="jdbc:mysql:localhost:3307/sqlpractice"
+user="root"
+'password="root"
+/>
+<sql:query var="empQuery" dataSource="${conn}">
+select * from Employ where Empno=?
+<sql:param value="${param.empno}"/>
+</sql:query>
+<c:forEach var="e" items="${empQuery.rows}">
+      Employ No :
+      <c:out value=" ${e.Empno}" /> <br/>
+      Name :
+      <c:out value="${e.Name}" /><br/>
+      Department :
+      <c:out= value="${e.Dept}" /> <br/>
+      Designation:
+      <c:out value="${e.Desig}" /> <br/>
+      Basic :
+      <c:out value="${e.Basic}" /> <br/><hr/>
+     </c:forEach>
+     </center>
+</form>
+</body>
+</html>

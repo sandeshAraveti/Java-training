@@ -1,0 +1,27 @@
+package com.hcl.project;
+
+public class StudentBAL {
+	
+	static StringBuilder sb=new StringBuilder();
+	public boolean addStudentBal(Student objStudent){
+		boolean isAdded=true;
+		if(objStudent.getSno()<=0){
+			sb.append("Student cannot be negative or zero\r\n");
+			isAdded=false;
+		}
+		if(objStudent.getName().length()<=3){
+			sb.append("NAme more than 3 characters\r\n");
+			isAdded=false;
+		}
+		if(objStudent.getCity().length()<=3){
+			sb.append("City more than 3 characters\r\n");
+			isAdded=false;
+			
+		}
+		if(objStudent.getCgp()<0){
+			sb.append("cgp Non-negative \r\n");
+			isAdded=false;
+		}
+	}
+
+}

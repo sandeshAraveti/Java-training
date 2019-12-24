@@ -1,0 +1,35 @@
+package com.hcl.project;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class StudentTest {
+	@Test  
+	public void testGettersAndSetters(){
+		Student objStudent=new Student();
+		objStudent.setSno(1); 
+		objStudent.setName("Harika");
+		objStudent.setCity("Nellore");
+		objStudent.setCgp(8.9);
+		
+		assertEquals(1,objStudent.getSno());
+		assertEquals("Harika",objStudent.getName());
+		assertEquals("Nellore",objStudent.getCity());
+		assertEquals(8.9,objStudent.getCgp(),0);
+	}
+	@Test
+
+	@Override
+	public String toString() {
+		return "StudentTest [getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()="
+				+ super.toString() + "]";
+	}
+	
+	
+
+
+		
+	}
+
+

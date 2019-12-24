@@ -1,0 +1,94 @@
+import java.util.Scanner;
+
+import com.hcl.jdk8.EmployeDAO;
+
+public class EmployeMain {
+	public static void main(String[] args) {
+		int choice;
+		Scanner sc=new Scanner(System.in);
+		do {
+			System.out.println("Options");
+			System.out.println("_ _ _ _ _");
+			System.out.println("1.Add Employ");
+			System.out.println("2.Show Employ");
+			System.out.println("3.Search Employ");
+			System.out.println("4.Write Employ File");
+			System.out.println("5.Read Employ File");
+			System.out.println("6.Exit");
+			System.out.println("Enter your choice ");
+			choice = sc.nextInt();
+			switch(choice) {
+			case 1:
+				addEmploye();
+				break;
+			case 2:
+				showEmploye();
+				break;
+			case 3:
+				searchEmploy();
+				break;
+			case 4 : 
+				writeEmployeFile();
+				break;
+			case 5 : 
+				readEmployFile();
+				break;
+			case 6:
+				return;
+			default :
+				System.out.println("Invalid Input");
+			}
+
+	}while(choice!=6);
+
+}
+private static void readEmployFile() {
+	new EmployeDAO().readEmployFileDao();
+	}
+private static void writeEmployeFile() {
+	new EmployeDAO().writeEmployFileDao();
+		
+	}
+
+
+	private static void searchEmploy() {
+		int empId;
+		System.out.println("Enter emp Id ");
+		Scanner sc = new Scanner(System.in);
+		empId=sc.nextInt();
+		EmployeDAO obj = new EmployeDAO();
+		Employ employ = obj.searchEmployDao(empId);
+		System.out.println(employ);
+		
+	}
+
+	private static void showEmploye() {
+		EmployeDAO obj = new EmployeDAO();
+		List<Employe> employees = obj.showEmployeDao();
+		for (Employe employe : employees) {
+			System.out.println(employe);
+		}
+	
+		
+	}
+
+	private static void addEmploye() {
+		Employ objemploy=new Employ();
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter emp no: ");
+		objemploy.setEmpId(Integer.parseInt(sc.nextLine()));
+		System.out.println("Enter emp name ");
+		objemploy.setEmpId(sc.nextLine());
+		System.out.println("Enter emp dept ");
+		objemploy.setEmpDepartment(sc.nextLine());
+		System.out.println("Enter emp phno: ");
+		objemploy.setEempPhone(sc.nextLine());
+		System.out.println("Enter emp email ");
+		objemploy.setEmpEmail(sc.nextLine());
+		EmployeDAO obj = new EmployeDAO();
+		String res= obj.addEmployDao(objemploy);
+		System.out.println(res);
+	}
+}
+
+}

@@ -1,0 +1,17 @@
+package com.hcl.day2;
+
+public class QuizStudent {
+public static void main(String[] args) {
+	Student s1=new Student();
+	Student s2=new Student();
+	System.out.println(s1==s2);
+	s1.sno=1;
+	s1.cgp=13;
+	
+	
+	s2.sno=3;
+	s2.cgp=15;
+	
+	 System.out.println(s1.equals(s2));
+}
+}

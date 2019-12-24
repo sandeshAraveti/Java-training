@@ -1,0 +1,33 @@
+package com.hcl.abst;
+
+abstract class Employ{
+	int empno;
+	String name;
+	double salary;
+	public Employ(int empno, String name, double salary) {
+		super();
+		this.empno = empno;
+		this.name = name;
+		this.salary = salary;
+	}
+	@Override
+	public String toString() {
+		return "Employ [empno=" + empno + ", name=" + name + ", salary=" + salary + "]";
+	}
+	
+}
+class Nanditha extends Employ{
+
+	public Nanditha(int empno, String name, double salary) {
+		super(empno, name, salary);
+		// TODO Auto-generated constructor stub
+	}
+	
+}
+class Sai extends Employ{
+	
+}
+public class AbsCon {
+	
+
+}

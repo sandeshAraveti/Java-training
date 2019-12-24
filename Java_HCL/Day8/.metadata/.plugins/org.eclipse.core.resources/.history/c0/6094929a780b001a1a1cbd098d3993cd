@@ -1,0 +1,70 @@
+package com.hcl.project;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CustomerDAO {
+	  static List<Customer> lstCustomer=null;
+	  static{
+		  lstCustomer=new ArrayList<Customer>();
+		  
+	  }
+	  public String addCustomerDao(Customer customer){
+		  lstCustomer.add(customer);
+		  
+		return "customer data created successfully";
+		  
+	  }
+	  public List<Customer> showCustomerDao(){
+		  
+		return lstCustomer;
+		  
+	  }
+		public Customer searchCustomerDao(int custId){
+			Customer objCustomer=null;
+			for (Customer customer : lstCustomer) {
+				if(customer.getCustId()==custId);
+				objCustomer=customer;
+				
+			} 
+			return objCustomer;
+			
+		}
+		public String deleteCustomerDao(int custId){
+			String result="";
+			Customer customer= searchCustomerDao(custId);
+			if(Customer!=null)
+			{
+				lstCustomer.remove(Customer);
+				result="Customer record deleted successfully";
+			}else{
+				result="Customer Record not found...";
+			}
+			
+			return result;
+			}
+		public String updateCustomertDao(Customer objcustomer){
+			Customer customer=searchCustomerDao(objcustomer.getCustId());
+			String result="";
+			if(customer!=null){
+				for(Customer s: lstCustomer){
+					if(s.getCustId()==objCustId.getCustId()){
+						s.setName(objCustomer.getName());
+						s.setCity(objCustomer.get());
+						s.setCgp(objCustomer.get());
+						
+					}
+				}
+				result="Customer Record Updted...";
+			}else{
+				result="Customer Record not Found";
+				
+			}
+			return result;
+			
+		}
+		}
+		
+
+
+}

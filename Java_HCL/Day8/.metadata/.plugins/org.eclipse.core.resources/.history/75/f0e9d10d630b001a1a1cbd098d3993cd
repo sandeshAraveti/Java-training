@@ -1,0 +1,31 @@
+package com.hcl.project;
+
+import java.util.Scanner;
+
+public class StudentMain {
+	public static void main(String[] args) {
+		Student objStudent=new Student();
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Student No");
+		objStudent.setSno(Integer.parseInt(sc.nextLine()));
+		System.out.println("Enter Student Name");
+		objStudent.setName(sc.nextLine());
+		System.out.println("Enter student city");
+		objStudent.setCity(sc.nextLine());
+		System.out.println("enter cgp");
+		objStudent.setCgp(Double.parseDouble(sc.nextLine()));
+		
+		StudentBAL obj=new StudentBAL();
+			try {
+				boolean res=obj.addStudentBal(objStudent);
+				if(res==true){
+					System.out.println("Student added Successfully");
+				}
+			} catch (StudentException e) {
+				System.out.println(e.getMessage());
+				
+			;
+			}
+	}
+
+}

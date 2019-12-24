@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body background=image4.jpg.>
+ <img src="flower.jpg"> 
+ <centre>Welcome</centre>
+<pre> 
+Welcome 
+To 
+HTML Programming...
+</pre>
+</body>
+</html>

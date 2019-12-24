@@ -1,0 +1,10 @@
+127.0.0.1 - - [05/Dec/2019:15:12:19 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [05/Dec/2019:15:12:19 +0530] "GET /ServletDemo1/ HTTP/1.1" 200 166
+0:0:0:0:0:0:0:1 - - [05/Dec/2019:15:12:59 +0530] "GET /ServletDemo1/HelloServlet HTTP/1.1" 200 35
+127.0.0.1 - - [05/Dec/2019:15:30:42 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [05/Dec/2019:15:30:42 +0530] "GET /ServletDemo1/DemoServlet HTTP/1.1" 200 14
+0:0:0:0:0:0:0:1 - - [05/Dec/2019:15:31:55 +0530] "GET /ServletDemo1/demo.html HTTP/1.1" 200 323
+0:0:0:0:0:0:0:1 - - [05/Dec/2019:15:32:01 +0530] "GET /ServletDemo1/DemoServlet?sname=Gayathri HTTP/1.1" 200 18
+127.0.0.1 - - [05/Dec/2019:15:47:21 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [05/Dec/2019:15:47:21 +0530] "GET /ServletDemo1/calc.html HTTP/1.1" 200 393
+0:0:0:0:0:0:0:1 - - [05/Dec/2019:15:47:33 +0530] "GET /ServletDemo1/CalcServlet?firstNo=1&secondNo=2 HTTP/1.1" 200 47

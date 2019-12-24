@@ -1,0 +1,109 @@
+package com.hcl.project;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.io.*;
+
+public class CustomerDAO {
+	  static List<Customer> lstCustomer=null;
+	  static{
+		  lstCustomer=new ArrayList<Customer>();
+	  
+	  }
+	  public String addCustomerDao(Customer customer){
+		  lstCustomer.add(customer);
+		 
+		return "customer record created successfully";
+		  
+	  }
+	  public List<Customer> showCustomerDao(){
+		  
+		return lstCustomer;
+		  
+	  }
+		public Customer searchCustomerDao(int custId){
+			Customer objCustomer=null;
+			for (Customer customer : lstCustomer) {
+				if(customer.getCustId()==custId);
+				objCustomer=customer;
+				
+			} 
+			return objCustomer;
+			
+		}
+		public String deleteCustomerDao(int custId){
+			String result="";
+			Customer customer= searchCustomerDao(custId);
+			if(customer!=null)
+			{
+				lstCustomer.remove(customer);
+				result="Customer record deleted successfully";
+			}else{
+				result="Customer Record not found...";
+			}
+			
+			return result;
+			}
+		public String updateCustomertDao(Customer objcustomer){
+			Customer customer=searchCustomerDao(objcustomer.getCustId());
+			String result="";
+			if(customer!=null){
+				for(Customer s: lstCustomer){
+					if(s.getCustId()==objcustomer.getCustId()){
+					
+						  s.setCustName(objcustomer.getCustName());
+							s.setAnnualPremium(objcustomer.getAnnualPremium());
+							s.setModalPremium(objcustomer.getModalPremium());
+							s.setPaymentMode(objcustomer.getPaymentMode());
+							
+							
+					}
+				}
+				result="Customer Record Updted...";
+			}else{
+				result="Customer Record not Found";
+				
+			}
+			return result;
+			
+		}
+		public void writeCustomertFileDao() {
+			try {
+				FileOutputStream fout=new FileOutputStream("c:/files/student.txt");
+				ObjectOutputStream objout=new ObjectOutputStream(fout);
+				objout.writeObject(lstCustomer);
+				objout.close();
+				fout.close();
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		public void readCustomerFileDao() {
+			try {
+				FileInputStream fin=new FileInputStream("c:/files/student.txt");
+				ObjectInputStream objin=new ObjectInputStream(fin);
+				lstCustomer =(List<Customer>)objin.readObject();
+				objin.close();
+				fin.close();
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+		}
+		
+
+
+

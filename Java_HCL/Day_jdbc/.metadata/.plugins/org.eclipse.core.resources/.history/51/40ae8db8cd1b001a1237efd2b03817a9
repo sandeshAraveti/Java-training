@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EMPLOYEES>
+<EMPLOY>
+    <EMPNO>1</EMPNO>
+    <NAME>GAYATHRI</NAME>
+    <BASIC>54365</BASIC>
+</EMPLOY>
+<EMPLOY>
+     <EMPNO>2</EMPNO>
+    <NAME>LAXMI</NAME>
+    <BASIC>54465</BASIC>
+</EMPLOY>
+</EMPLOYEES>

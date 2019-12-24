@@ -1,0 +1,72 @@
+package com.hcl.abst;
+
+import com.hcl.sup.Anusha;
+import com.hcl.sup.HclEmploy;
+import com.hcl.sup.Monica;
+import com.hcl.sup.Nanditha;
+
+abstract class Student{
+	int sno;
+	String sname;
+	double cgp;
+	public Student(int sno, String sname, double cgp) {
+		super();
+		this.sno = sno;
+		this.sname = sname;
+		this.cgp = cgp;
+	}
+	@Override
+	public String toString() {
+		return "Student [sno=" + sno + ", sname=" + sname + ", cgp=" + cgp + "]";
+	}
+	
+}
+class Nanditha extends Student{
+
+	public Nanditha(int sno, String sname, double cgp) {
+		super(sno, sname, cgp);
+		// TODO Auto-generated constructor stub
+	}
+	
+}
+class Monica extends Student{
+
+	public Monica(int sno, String sname, double cgp) {
+		super(sno, sname, cgp);
+		// TODO Auto-generated constructor stub
+	}
+	
+}
+class Anusha extends Student{
+
+	public Anusha(int sno, String sname, double cgp) {
+		super(sno, sname, cgp);
+		// TODO Auto-generated constructor stub
+	}
+	
+}
+
+public class AbsStudent {
+	public static void main(String[] args) {
+		public static void main(String[] args) {
+			Student sNanditha=new Nanditha("1222", "Nanditha", "45");
+			Student sMonica=new Monica("1333","Monica","55");
+			Student sAnusha=new Anusha("1444","Anusha","42");
+		 Student[] arrStudent=
+			 {
+					 sNanditha,
+					 sMonica,
+					 sAnusha,
+					 
+			 };
+		 for (Student student: arrStudent) {
+			 System.out.println(student);
+			
+		}
+			
+		}
+	}
+	
+	
+
+

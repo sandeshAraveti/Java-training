@@ -1,0 +1,24 @@
+package com.hcl.contollers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.hcl.beans.Employ;
+import com.hcl.dao.EmployDao;
+
+@Controller
+public class EmployController {
+@Autowired
+EmployDao dao;
+
+	@RequestMapping("/viewemploy")
+	public String viewemp(Model m){
+		List<Employ> list=dao.getEmployess();
+		m.addAttribute("list",list);
+		return "viewemploy";
+	}
+}

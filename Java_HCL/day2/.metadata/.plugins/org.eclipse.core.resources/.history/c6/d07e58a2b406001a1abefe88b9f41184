@@ -1,0 +1,29 @@
+package com.hcl.day2;
+
+public class Student {
+	
+	int sno;
+	String firstName;
+	String lastName;
+	double cgp;
+	@Override
+	public boolean equals(Object obj) {
+		Student student=(Student)obj;
+		if(student.cgp==cgp){
+			return true;
+			
+		}else{
+			return false;
+		}
+	}
+	@Override
+	public String toString() {
+		return "Student [sno=" + sno + ", firstName=" + firstName
+				+ ", lastName=" + lastName + ", cgp=" + cgp + "]";
+	}
+	}
+	
+	
+
+
+

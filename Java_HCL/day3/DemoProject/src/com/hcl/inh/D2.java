@@ -1,0 +1,9 @@
+package com.hcl.inh;
+
+public class D2 extends D1 {
+	private D2(){
+	System.out.println("Derived Class Constructor");
+	
+	}
+
+}

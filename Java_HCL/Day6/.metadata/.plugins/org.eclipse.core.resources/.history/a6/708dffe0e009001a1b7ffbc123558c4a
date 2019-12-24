@@ -1,0 +1,27 @@
+package com.hcl.ex;
+
+class NegativeException extends Exception{
+	 NegativeException(String error){
+		 super(error);
+	 }
+}
+class NumberZeroException extends Exception{
+	NumberZeroException(String error){
+		super(error);
+	}
+}
+
+public class Custom {
+	
+	public void add(int a,int b) throws NegativeException{
+		boolean flag=true;
+		if(a<0||b<0){
+			flag=false;
+			throw new NegativeException("Negative Nos Not Allowed");
+		}
+	}
+	public static void main(String[] args) {
+		
+	}
+
+}

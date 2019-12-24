@@ -1,0 +1,30 @@
+package com.hcl.day3;
+
+public class SbExample {
+public void show(){
+StringBuilder sb=new StringBuilder("Welcome to Java");
+
+System.out.println(sb);
+sb.append("From HCL Batch All the best...");
+System.out.println(sb);
+sb.insert(3, "Sneha");
+System.out.println(sb);
+sb.delete(3, 8);
+System.out.println(sb);
+sb.append("\n FirstName validation Failed...");
+System.out.println(sb);
+sb.append("\n LastName validation Failed....");
+System.out.println(sb);
+}
+public static void main(String[] args) {
+    new SbExample().show();
+}
+}
+
+
+
+
+
+
+
+

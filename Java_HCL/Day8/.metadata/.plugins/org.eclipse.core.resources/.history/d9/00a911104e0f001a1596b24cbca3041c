@@ -1,0 +1,16 @@
+package com.hcl.junit;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class TestData {
+
+	@Test
+	public void testsayHello() {
+		Data objData=new Data();
+		assertEquals("Welcome to java...",objData.sayHello());
+		
+	}
+
+}

@@ -1,0 +1,22 @@
+package com.hcl.day3;
+
+public class StrDemo {
+public void show(){
+    String msg="Welcome to Java Programming...From HCL";
+    System.out.println("Length" +msg.length());
+    System.out.println("First Occurence of 'a' is" +msg.indexOf('a'));
+    System.out.println("Last Occurence of 'a' is +msg.lastindexOf('a')");
+    System.out.println("First Occcurence of 'z' "+ "" +msg.indexOf('z'));
+    System.out.println("Char at 5th position" +msg.charAt(5));
+    System.out.println("Lower case" +msg.toLowerCase());
+    System.out.println("Upper Case" +msg.toUpperCase());
+    System.out.println("Substring" +msg.substring(1,10));
+    System.out.println("Starts with" +msg.startsWith("Welcome"));
+    System.out.println("Starts with" +msg.startsWith("Hello"));
+    System.out.println("Concat String" +msg.concat("OMR"));
+    System.out.println("Replaced String" +msg.replace("Java","J2EE"));
+}
+public static void main(String[] args) {
+    new StrDemo().show();
+    }
+}

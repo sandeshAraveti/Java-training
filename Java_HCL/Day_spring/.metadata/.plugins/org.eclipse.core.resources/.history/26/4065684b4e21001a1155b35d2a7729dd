@@ -1,0 +1,12 @@
+package com.hcl.contollers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import com.hcl.dao.EmployDao;
+
+@Controller
+public class EmployController {
+@Autowired
+EmployDao dao;
+}

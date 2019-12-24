@@ -1,0 +1,34 @@
+package com.hcl.day2;
+
+public class StudentC {
+
+int sno;
+String firstName;
+String lastName;
+double cgp;
+
+
+public StudentC(){
+	sno=5;
+	firstName="Nandi";
+	lastName="Sai";
+	cgp=56;
+	
+}
+
+public StudentC(int sno, String firstName, String lastName, double cgp) {
+	super();
+	this.sno = sno;
+	this.firstName = firstName;
+	this.lastName = lastName;
+	this.cgp = cgp;
+	
+}
+
+@Override
+public String toString() {
+	return "StudentC [sno=" + sno + ", firstName=" + firstName + ", lastName="
+			+ lastName + ", cgp=" + cgp + "]";
+
+}
+}

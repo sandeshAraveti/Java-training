@@ -1,0 +1,21 @@
+package com.hcl.sup;
+
+class Supcon {
+	int sno;
+	String name;
+	public Supcon(int sno, String name) {
+		super();
+		this.sno = sno;
+		this.name = name;
+	}
+	@Override
+	public String toString() {
+		return "First [sno=" + sno + ", name=" + name + "]";
+	}
+	
+		
+	}
+
+public class Supcon {
+	
+}

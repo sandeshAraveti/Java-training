@@ -1,0 +1,25 @@
+package com.hcl.sup;
+class HclEmploy{
+	String sapId;
+	String Name;
+	String gender;
+	String designation;
+	public HclEmploy(String sapId, String name, String gender, String designation) {
+		super();
+		this.sapId = sapId;
+		Name = name;
+		this.gender = gender;
+		this.designation = designation;
+	}
+	@Override
+	public String toString() {
+		return "HclEmploy [sapId=" + sapId + ", Name=" + Name + ", gender=" + gender + ", designation=" + designation
+				+ "]";
+	}
+	
+}
+
+public class SupEmploy {
+	
+
+}

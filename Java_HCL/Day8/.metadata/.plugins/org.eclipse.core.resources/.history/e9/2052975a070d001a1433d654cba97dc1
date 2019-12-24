@@ -1,0 +1,82 @@
+package com.hcl.jdk8;
+import java.util.*;
+
+import com.hcl.project.Customer;
+import com.hcl.project.CustomerDAO;
+import com.hcl.project.CustomerException;
+
+
+public class EmployeBAL {
+	static StringBuilder sb=new StringBuilder();
+	private Employe objEmploye;
+	public void addCustomerBal(Employe objCustomer) throws EmployeException{
+		boolean isAdded=true;
+		if(objCustomer.getEmpId()<=0){
+			sb.append("employe Id cannot be negative or zero\r\n");
+			isAdded=false;
+		}
+		if(objEmploye.getEmpName().length()>=3){
+			sb.append("empNAme more than 3 characters\r\n");
+			isAdded=false;
+		}
+		if(objEmploye.getEmpPhone().length()>=9){
+			sb.append("empphone more than 9 chaaracters\r\n");
+			isAdded=false;
+		}
+		if(objEmploye.getEmpDateOfJoin()<= && objEmploye.getEmpDateOfJoin()>=10000){
+			sb.append(" Employe date of joining should be  2000 and 10000 \r\n");
+			isAdded=false;
+			
+		}
+		if(objEmploye.getEmpLeaveBalance()<=1000 && objCustomer.getEmpLeaveBalance()>=50000){
+			sb.append("Modal premium should be in 1000 to 50000  \r\n");
+			isAdded=false;
+			
+		}
+		if(objCustomer.getEmpManagerId()<=1 && objCustomer.getEmpManagerId()>=3){
+			sb.append("Payment mode should be 1 2 3");
+			isAdded=false;
+		}
+		if(objCustomer.getEmpDepartment()<=1 && objCustomer.getEmpDepartment()isAdded()>=3){
+			sb.append("Payment mode should be 1 2 3");
+			isAdded=false;
+		}
+		if(isAdded==false){
+			throw new EmployeException(sb.toString());
+			
+		}else{
+			new EmployeDAO().addEmployeDao(objCustomer);
+		}
+		return isAdded;
+	}
+	public List<Employe> showCustomerBal(){
+		return new EmployeDAO().showEmployeDao();
+	}
+	public Employe searchCustomerBal(int custId){
+		return new EmployeDAO().searchEmployeDao(custId);
+		
+	}
+	public String updateCustomerBAl(Employe objCustomer){
+		return new EmployeDAO().updateEmployeDao(objCustomer);
+	}
+	public String deleteCustomerBal(int custId){
+		return new EmployerDAO().deleteCustomerDao(custId);
+	}
+	public void writeCustomerFileBal() {
+		new EmployeDAO().writeCustomertFileDao();
+	}
+	
+	public void readStudentFileBal() {
+		new EmployerDAO().readCustomerFileDao();
+
+}
+}	
+
+
+	
+	
+	
+
+}
+	}
+}

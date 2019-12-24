@@ -1,0 +1,23 @@
+package com.hcl.day3;
+
+public class MaxNum {
+	public void check(int a, int b, int c){
+		int m=a;
+		if(m<b){
+			m=b;
+		}
+		if(m<c){
+			m=c;
+		}
+		System.out.println("Maximum of three numbers" +m);
+	
+public static void main(String[] args) {
+	int a,b,c;
+	a=10;
+	b=23;
+	c=65;
+	MaxNum obj=new MaxNum();
+	obj.check(a,b,c);
+	
+}
+}

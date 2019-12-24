@@ -1,0 +1,86 @@
+package com.hcl.task;
+public class Employ {
+
+	int empno;
+	String name;
+	String job;
+	double salary;
+	int leaveAvail;
+	
+	public Employ() {
+		
+	}
+	public void assignLeave(Employ[] arr) {
+		for (Employ employ : arr) {
+			if(employ.job.equals("Manager")) {
+				employ.leaveAvail=30;
+			} else {
+				employ.leaveAvail=20;
+			}
+		}
+	}
+	
+	public Employ(int empno, String name, String job, double salary) {
+		super();
+		this.empno = empno;
+		this.name = name;
+		this.job = job;
+		this.salary = salary;
+	}
+	@Override
+	public String toString() {
+		return "Employ [empno=" + empno + ", name=" + name + ", job=" + job
+				+ ", salary=" + salary + ", leaveAvail=" + leaveAvail + "]";
+	}
+	
+	
+}
+
+
+package com.hcl.task;
+
+public class LeaveHistory {
+
+	int empno;
+	int leaveTaken;
+	LeaveType leaveType;
+	LeaveStatus leaveStatus;
+	public LeaveHistory(int empno, int leaveTaken, LeaveType leaveType) {
+		super();
+		this.empno = empno;
+		this.leaveTaken = leaveTaken;
+		this.leaveType = leaveType;
+	}
+	
+	
+	
+	public LeaveHistory() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "LeaveHistory [empno=" + empno + ", leaveTaken=" + leaveTaken
+				+ ", leaveType=" + leaveType + ", leaveStatus=" + leaveStatus
+				+ "]";
+	}
+
+
+
+	public void applyLeave(Employ[] arr, LeaveHistory leave) {
+		for (Employ employ : arr) {
+			if(employ.empno==leave.empno) {
+				if(employ.job.equals("Manager")) {
+					leave.leaveStatus=LeaveStatus.APPROVED;
+				} else {
+					leave.leaveStatus=LeaveStatus.PENDING;
+				}
+			}
+		}
+	}
+}
+
+

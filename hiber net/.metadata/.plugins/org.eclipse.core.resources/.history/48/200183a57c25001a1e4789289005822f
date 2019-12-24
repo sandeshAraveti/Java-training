@@ -1,0 +1,14 @@
+package com.pack.form;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Customer",schema="test")
+public class Customer {
+		private Integer id;
+		private String name;
+		private String address;
+		private Integer age;
+		private Double salary;
+}

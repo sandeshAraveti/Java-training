@@ -1,0 +1,26 @@
+
+package com.hcl.day3;
+
+
+public class CustomerMain {
+    public static void main(String[] args) {
+        CustomerMain c1=new CustomerMain();
+        System.out.println(c1);
+        CustomerMain c2=new CustomerMain(3,"Nanditha","nellore",66734);
+        System.out.println(c2);
+        c1.custId=5;
+        c1.name="harika";
+        c1.city="nellore";
+        c1.premium=75.67;
+        c2.custId=8;
+        c2.name="sunitha";
+        c2.city="nellore";
+        c2.premium=89.00;
+        Customer[] arr={c1,c2};
+        for (CustomerMain customer : arr) {
+            System.out.println(customerMain);
+           
+        }
+
+    }
+}

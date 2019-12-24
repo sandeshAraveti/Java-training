@@ -1,0 +1,45 @@
+package com.hcl.project;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class CustomerTest {
+	@Test
+
+	public String toString() {
+		return "Customer [custId=" + custId + ", custName=" + custName + ", annualPremium=" + annualPremium
+				+ ", modalPremium=" + modalPremium + ", paymentMode=" + paymentMode + "]";
+		
+			Customer objCustomer=new Customer();
+			objCustomer.setCustId(1);
+			objCustomer.setCustName("Gayathri");
+			objCustomer.setAnnualPremium(27000);
+			objCustomer.setModalPremium(43566);
+			objCustomer.setPaymentMode(1);
+			assertEquals("Customer[CustId=1,CustName=Gayathri,AnnualPremium=27000,ModalPremium=43566,PaymentMode=1]",objCustomer.toString();
+			
+	}
+	
+	@Test
+	public void testGettersAndSetters(){
+		Customer objCustomer=new Customer();
+		objCustomer.setCustId(1);
+		objCustomer.setCustName("Gayathri");
+		objCustomer.setAnnualPremium(27000);
+		objCustomer.setModalPremium(43566);
+		objCustomer.setPaymentMode(1);
+		
+		assertEquals(1,objCustomer.getCustName());
+		assertEquals("Gayathri",objCustomer.getCustName());
+		assertEquals(27000,objCustomer.getAnnualPremium());
+		assertEquals(43566,objCustomer.getModalPremium());
+		assertEquals(1,objCustomer.getPaymentMode());
+		
+		
+		
+	}
+
+	
+	}
+

@@ -1,0 +1,22 @@
+package com.hcl.day4;
+
+public class EmployLeave {
+int empno;
+String name;
+String job;
+int leaveavail;
+double salary;
+public EmployLeave()
+{
+	
+}
+public EmployLeave(int empno, String name, String job, int leaveavail,
+		double salary) {
+	super();
+	this.empno = empno;
+	this.name = name;
+	this.job = job;
+	this.leaveavail = leaveavail;
+	this.salary = salary;
+}
+}

@@ -1,0 +1,10 @@
+
+package com.hcl.day2;
+
+public class P11 {
+public static void main(String[] args) {
+	
+System.out.println(5+3+"45");
+System.out.println("13"+"$"+3);
+}
+}

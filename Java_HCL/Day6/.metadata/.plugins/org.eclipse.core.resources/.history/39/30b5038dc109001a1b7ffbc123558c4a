@@ -1,0 +1,71 @@
+package com.hcl.abst;
+
+abstract class HclTraining{
+	abstract void loginTime();
+	abstract void employName();
+	abstract void logoutTime();
+}
+
+class Nanditha extends HclTraining{
+
+ @Override
+void loginTime() {
+	System.out.println("Came at 8:30 AM ");
+}
+
+@Override
+void employName() {
+	System.out.println("Hi i am Nanditha");
+	
+}
+
+@Override
+void logoutTime() {
+	System.out.println("Will go by 5:30 PM");
+	
+}
+}
+class Sai extends HclTraining{
+
+	@Override
+	void loginTime() {
+		System.out.println("Sai came by 7:30 AM");
+		
+	}
+
+	@Override
+	void employName() {
+		System.out.println("Hi i am Sai");
+		
+	}
+
+	@Override
+	void logoutTime() {
+		System.out.println("Will go by 5:30 PM");
+		
+	}
+}
+public class AbsDemo{
+	public static void main(String[] args) {
+		HclTraining[] arrTraining=
+			{
+					new Nanditha(),
+					new Sai()
+			};
+		for (HclTraining hclTraining : arrTraining) {
+			hclTraining.employName();
+			hclTraining.loginTime();
+			hclTraining.logoutTime();
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+

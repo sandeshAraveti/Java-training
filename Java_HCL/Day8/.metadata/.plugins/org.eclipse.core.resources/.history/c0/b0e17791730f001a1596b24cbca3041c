@@ -1,0 +1,52 @@
+package com.hcl.project;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class StudentTest {
+	
+	  @Test
+	   public void testToString() {
+	    //"Student [sno=" + sno + ", name=" + name + ", city=" + city
+	            //+ ", cgp=" + cgp + "]"
+	    Student objStudent=new Student();
+	       objStudent.setSno(1);
+	       objStudent.setName("Harika");
+	       objStudent.setCity("Nellore");
+	       objStudent.setCgp(7.95);
+	       assertEquals("Student [sno=1, name=Harika, city=Nellore, cgp=7.95]", objStudent.toString());
+	   }
+
+	@Test  
+	public void testGettersAndSetters(){
+		Student objStudent=new Student();
+		objStudent.setSno(1); 
+		objStudent.setName("Harika");
+		objStudent.setCity("Nellore");
+		objStudent.setCgp(8.9);
+		
+		assertEquals(1,objStudent.getSno());
+		assertEquals("Harika",objStudent.getName());
+		assertEquals("Nellore",objStudent.getCity());
+		assertEquals(8.9,objStudent.getCgp(),0);
+	}
+
+   
+
+	
+
+
+
+   
+   
+	
+
+	
+	
+
+
+		
+	}
+
+

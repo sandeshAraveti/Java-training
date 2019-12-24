@@ -1,0 +1,21 @@
+package com.hcl.day4;
+
+public class Customer {
+	int CustId;
+	String name;
+	String city;
+	double premium;
+	public Customer(int custId, String name, String city, double premium) {
+		super();
+		CustId = custId;
+		this.name = name;
+		this.city = city;
+		this.premium = premium;
+	}
+	@override
+	public String toString() {
+		return "Customer [CustId=" + CustId + ", name=" + name + ", city="
+				+ city + ", premium=" + premium + "]";
+	}
+	
+}

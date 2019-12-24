@@ -1,0 +1,20 @@
+package com.hcl.day4;
+
+public class Payroll {
+	Static int totalsalary;
+    public void addsalary(int salary )
+	totalsalary+=salary;
+	}
+	public static void main(String[] args) {
+		
+	Payroll empMonica=new Payroll()	;
+	Payroll empAnusha=new Payroll();
+	Payroll empNanditha=new Payroll();
+	 
+	empMonica.addsalary(45);
+	empAnusha.addsalary(14);
+	empNanditha.addsalary(30);
+	System.out.println(Payroll.totalsalary);
+	}
+	
+}

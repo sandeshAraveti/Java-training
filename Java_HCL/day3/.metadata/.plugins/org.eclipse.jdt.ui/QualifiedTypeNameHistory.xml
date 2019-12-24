@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.hcl.day4.Customer"/>
+<fullyQualifiedTypeName name="com.hcl.day4.CustomerMain"/>
+<fullyQualifiedTypeName name="com.hcl.day4.Cricket"/>
+<fullyQualifiedTypeName name="com.hcl.day4.Payroll"/>
+<fullyQualifiedTypeName name="com.hcl.day4.Quiz"/>
+<fullyQualifiedTypeName name="com.hcl.inh.Second"/>
+<fullyQualifiedTypeName name="com.hcl.sup.Second"/>
+</qualifiedTypeNameHistroy>
